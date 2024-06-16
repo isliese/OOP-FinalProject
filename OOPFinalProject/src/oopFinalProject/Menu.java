@@ -73,7 +73,6 @@ public class Menu {
         scrollPane.setPreferredSize(new Dimension(800, 400));
         frame.add(scrollPane, BorderLayout.NORTH);
 
-        // 프레임 설정, 표시 
         frame.pack();
         frame.setVisible(true);
     }
@@ -102,13 +101,13 @@ public class Menu {
         return panel;
     }
 
-    // 개별 메뉴 아이템 패널 생성 메서드
+    // 개별 메뉴 아이템 패널 
     private JPanel createMenuItem(String name, int price, String imageName) {
         JPanel panel= new JPanel(new GridBagLayout());
         GridBagConstraints gbc= new GridBagConstraints();
         gbc.insets= new Insets(5, 5, 5, 5);
 
-        // 이미지 레이블 생성 및 추가
+        // 이미지 레이블 
         JLabel imageLabel= new JLabel();
         // 이미지 경로 
         ImageIcon icon= new ImageIcon(getClass().getResource("/images/" + imageName + ".png"));
@@ -118,12 +117,12 @@ public class Menu {
         gbc.gridy= 0;
         panel.add(imageLabel, gbc);
 
-        // 메뉴명 및 가격 레이블 생성 
+        // 메뉴명 및 가격 레이블 
         JLabel nameLabel= new JLabel("<html>" + name + "<br>" + price + "원</html>", SwingConstants.CENTER);
         gbc.gridy= 1;
         panel.add(nameLabel, gbc);
 
-        // 수량 조절 및 담기 버튼 패널 생성 
+        // 수량 조절 및 담기 버튼 패널 
         JPanel controlPanel= new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 5));
         JButton minusButton= new JButton("-");
         JTextField quantityField= new JTextField("0", 2);
@@ -160,7 +159,7 @@ public class Menu {
             }
         });
 
-        // 수량 조절 및 담기 버튼을 패널에 추가
+        // 수량 조절 및 담기 버튼 패널
         controlPanel.add(minusButton);
         controlPanel.add(quantityField);
         controlPanel.add(plusButton);
