@@ -27,7 +27,7 @@ public class Menu {
 	private int total= 0;
 	
 	private String[] coffeeNames= {"블랙아리아 아메리카노", "블랙아리아 딥라떼", "돌체라떼", "디카페인 아메리카노", "디카페인 카페라떼", "디카페인 바닐라딜라이트", "콜드브루 딜라이트", "콜드브루 라떼", "콜드 브루"}; // 메뉴명 
-	private int[]  coffeePrices= {3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000}; // 가격 
+	private int[]  coffeePrices= {5000, 5000, 6200, 4900, 5600, 6600, 6500, 5700, 5100}; // 가격 
 	
 	public Menu() { 
 		frame= new JFrame("HOLLYS 키오스크"); 
