@@ -14,7 +14,7 @@ public class Menu {
     private JLabel totalLabel; // 총 금액을 표시할 totalLabel
     private int total = 0; // 총 금액을 저장하는 변수
 
-    // 메뉴 9개: 커피 메뉴명과 가격을 저장하는 배열
+    // 커피 메뉴 9개: 커피 메뉴명과 가격을 저장하는 배열
     private String[] coffeeNames = {
         "블랙아리아 아메리카노", "블랙아리아 딥라떼", "돌체라떼",
         "디카페인 아메리카노", "디카페인 카페라떼", "디카페인 바닐라딜라이트",
@@ -24,7 +24,13 @@ public class Menu {
         5000, 5000, 6200, 4900, 5600, 6600,
         6500, 5700, 5100
     };
-
+    // 논커피 메뉴 9개: 논커피 메뉴명과 가격  
+    private String[] nonCoffeeNames = {"리얼 수박 생과일 주스","오렌지 자몽 싱싱 주스","토마토 통통 주스", "제주 말차 할라치노", "민트 초코칩 할라치노", "딸기 치즈케익 할라치노", "유자몽 스파클링", "복숭아 자두 스파클링", "청포도 스파클링" };
+    private int[] nonCoffeePrices = {6500, 6500, 6500, 6300, 6300, 6300 ,5800, 5800, 5800};
+    
+    // 푸드 메뉴 9개: 푸드 메뉴명과 가격 
+    private String[] foodNames= {"블루베리 치즈케이크", "봉주르 크림브륄레", "푸딩에 반하나 쏘스윗박스", "트리플 베리 요거트", "할리베어 초코홀릭 케이크", "자이언트 페퍼로니 프레즐", "콰트로 치즈 프레즐","더블 햄치즈 크루아상","B.E.L.T 호밀 샌드위치"};
+    private int[] foodPrices= {6500, 3300, 6500, 6300, 39000, 4900, 4900, 6500, 6500};	
     private JTextArea detailsArea; // 주문 상세 내역을 표시할 텍스트 Area
 
     
@@ -37,9 +43,13 @@ public class Menu {
         // 탭 패널 생성 & 커피 메뉴 패널 추가
         JTabbedPane tabbedPane = new JTabbedPane();
         JPanel coffeePanel = createMenuPanel(coffeeNames, coffeePrices, "coffee");
+        JPanel nonCoffeePanel= createMenuPanel(nonCoffeeNames, nonCoffeePrices, "noncoffee");
+        JPanel foodPanel= createMenuPanel(foodNames, foodPrices, "food"); 
+       
         tabbedPane.add("커피", coffeePanel);
-
-        // 주문 상세 내역: 테이블 모델
+        tabbedPane.add("논커피", nonCoffeePanel);       
+        tabbedPane.add("푸드", foodPanel); 
+        
         model = new DefaultTableModel();
         model.addColumn("메뉴");
         model.addColumn("가격");
@@ -256,3 +266,4 @@ public class Menu {
         new Menu();
     }
 }
+
