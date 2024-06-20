@@ -12,3 +12,5 @@
 <h3>협업 툴</h3>
 <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/>
+<img src="https://img.shields.io/badge/Google Docs-4285F4?style=flat-square&logo=googledocs&logoColor=white"/>
+
